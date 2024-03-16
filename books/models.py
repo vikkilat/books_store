@@ -18,14 +18,14 @@ class Author(models.Model):
 class Category(models.Model):
     """Model of categories"""
     slug = models.SlugField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         unique=True
     )
     title = models.CharField(
         max_length=255,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         unique=True
     )
 
@@ -39,14 +39,14 @@ class Category(models.Model):
 class Subcategory(models.Model):
     """Model of subcategories"""
     slug = models.SlugField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         unique=True
     )
     title = models.CharField(
         max_length=255,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         unique=True
     )
     category = models.ForeignKey(
